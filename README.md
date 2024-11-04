@@ -1,1 +1,1 @@
-## __Omegle Clone using webrtc__
+## __Omegle for university students__
