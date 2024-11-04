@@ -1,10 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import  Landing  from './components/landingpage';
+import Login from './components/login';
+
 function App() {
   return (
-   <>
-       <div className="bg-gray-400 p-2 items-center flex text-white">
-        Hello world
-       </div>
-   </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
