@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Socket, io } from "socket.io-client";
 
-const URL = "http://localhost:3000";
-
 export const Room = ({  
     name,
     localAudioTrack,
@@ -25,7 +23,7 @@ export const Room = ({
     const localVideoRef = useRef<HTMLVideoElement>();
 
     useEffect(() => {
-        const socket = io(URL);
+        const socket = io(process.env.WEBSOCKET_URL );
         socket.on('send-offer', async ({roomId}) => {
             console.log("sending offer");
             setLobby(false);

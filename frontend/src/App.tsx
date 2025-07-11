@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import  {Landing}  from './components/Landingpage';
-import Login from './components/Login';
+import Login from './pages/Login';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/room" element={<Landing />} />
+        <Route path="/l" element={<Login />} />
       </Routes>
     </BrowserRouter>
   )
