@@ -4,7 +4,7 @@ import { Socket, io } from "socket.io-client";
 
 const URL = "http://localhost:3000";
 
-export const Room = ({
+export const Room = ({  
     name,
     localAudioTrack,
     localVideoTrack
